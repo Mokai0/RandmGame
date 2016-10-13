@@ -6,11 +6,13 @@
   </head>
   <body>
     <h1>SELECT YOUR FIGHTER</h1>
-    <div id=fighterSelection>
+    <div id=choose>
       <button onclick="fighterSelect = brawler" id=brawler>BRAWLER</button>
       <button onclick="fighterSelect = tank" id=tank>TANK</button>
       <button onclick="fighterSelect = expert" id=expert>EXPERT</button>
     </div>
+
+    <p id=selectedFighter></p>
     <script src='app/fighters.js'></script>
     <script src='app/monster.js'></script>
     <script src='app/battle.js'></script>

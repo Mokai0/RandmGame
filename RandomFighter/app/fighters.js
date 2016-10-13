@@ -9,9 +9,12 @@ function fighterStats(hp, atk, def) {
   this.def = def;
 }
 
-if (fighterSelect != undefined) {
-  this.name = prompt("NAME YOUR FIGHTER");
+function fighterSelection() {
+  var placeholder = document.getElementById('selectedFighter');
+  placeholder.innerHTML = fighterSelect;
 }
+
+document.getElementById("choose").addEventListener("click", "jsjsjs");
 
 function fighter () {
   alert('this');
