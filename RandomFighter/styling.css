@@ -1,0 +1,12 @@
+#monsterCat {
+  width: 320px
+}
+.health {
+  color: red
+}
+#playerImg {
+  width: 200px;
+}
+body {
+  background-image: url(img/wallpapers/BassNature.jpg);
+}
