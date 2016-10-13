@@ -9,9 +9,9 @@ function fighterStats(name, hp, atk, def) {
   this.atk = atk;
   this.def = def;
 }
-
+// document.getElementById('my-object').innerText = JSON.stringify(myObject, null, 2)
 function fighterSelection() {
-  document.getElementById('selectedFighter').innerHTML += "you've clicked on "+fighterSelect;
+  document.getElementById('selectedFighter').innerText = "you've clicked on "+JSON.stringify(fighterSelect, null, 2);
   // var placeholder = document.getElementById('selectedFighter');
   // placeholder.innerHTML = fighterSelect;
 }
