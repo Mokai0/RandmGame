@@ -33,7 +33,7 @@ function fighterStats(name, hp, atk, def) {
 function fighterSelection() {
   document.getElementById('selectedFighter').innerText = "you've clicked on "+
   //Object.keys(fighterSelect).forEach(function(key) { return fighterSelect[key] });
-  JSON.stringify(fighterSelect, null, 2);
+  JSON.stringify(fighterSelect.name, null, 2);
   // var placeholder = document.getElementById('selectedFighter');
   // placeholder.innerHTML = fighterSelect;
 }
