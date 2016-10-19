@@ -2,19 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>!RandomFighter!</title>
     <link rel="stylesheet" href="styling.css">
   </head>
   <body>
     <h1>SELECT YOUR FIGHTER</h1>
     <div id=choose>
-      <button id=brawler>BRAWLER</button>
-      <button id=tank>TANK</button>
-      <button id=expert>EXPERT</button>
-      <button id=nulll>No Fighting</button>
+      <button class="btn btn-default" id=brawler>BRAWLER</button>
+      <button class="btn btn-default" id=tank>TANK</button>
+      <button class="btn btn-default" id=expert>EXPERT</button>
+      <button class="btn btn-default" id=nulll>No Fighting</button>
     </div>
 
     <p><pre id="selectedFighter"></pre></p>
+
+    <a class="btn btn-danger btn-lg btn-block" href="battlePage.html" type="submit">FIGHT</a>
+    <a class="btn btn-success" href='leaderboard.html'>LEADERBOARD</a>
     <script src='app/fighters.js'></script>
   </body>
 </html>
