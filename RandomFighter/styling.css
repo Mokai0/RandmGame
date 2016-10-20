@@ -1,19 +1,27 @@
 /* Call font to use it:
 font-family: 'Yatra One', cursive;
 */
+/*Global*/
 body {
   font-family: 'Yatra One', cursive;
 }
+body {
+  background-image: url(img/wallpapers/BassNature.jpg);
+}
 
+/*Battle Page*/
 #monsterCat {
   width: 320px
 }
 .health {
   color: red
 }
+
+#player {
+  float: right;
+  text-align: right;
+}
+
 #playerImg {
   width: 200px;
-}
-body {
-  background-image: url(img/wallpapers/BassNature.jpg);
 }
