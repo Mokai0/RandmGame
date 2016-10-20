@@ -1,12 +1,13 @@
 //Monster counter
 var mc = 1;
-var monsterCat = new monsterStats(mc);
+var monsterCat = new monsterStats(mc);  console.log(monsterCat);
 
 var button = document.getElementById('counter');
 
 function monsterCounter () {
   mc++;
   monsterCat = new monsterStats(mc);
+  console.log(monsterCat)
 }
 button.addEventListener("click", monsterCounter);
 
@@ -16,17 +17,20 @@ function monsterStats(level) {
   this.hp = 100 + (level*.25);
   this.atk = statGen(level, level+5);
   this.def = statGen(level, level+5);
-}     console.log(monsterStats);
+  function statGen(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+}
+
+
+
+
 
 // Returns a random integer between min (included) and max (included)
 // Using Math.round() will give you a non-uniform distribution!
-function statGen(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}      console.log(statGen());
-
-
-
-
+// function statGen(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }      console.log(statGen());
 
 // for (i = 0; i < '../img/monsters'.length; i++) {
 //     document.getElementById('mpic') += cars[i] + "<br>";

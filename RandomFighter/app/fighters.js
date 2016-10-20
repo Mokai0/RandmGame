@@ -15,7 +15,7 @@ buttons.forEach(function(button) {
       fighterSelect = expert;
     } else {
       fighterSelect = undefined
-      alert('Pick a fighter!')
+      alert('Why are you playing a fighting game?')
     }
     fighterSelect !== undefined ? console.log(JSON.stringify(fighterSelect, null, 2)) : null
   }

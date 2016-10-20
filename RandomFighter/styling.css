@@ -1,3 +1,10 @@
+/* Call font to use it:
+font-family: 'Yatra One', cursive;
+*/
+body {
+  font-family: 'Yatra One', cursive;
+}
+
 #monsterCat {
   width: 320px
 }
