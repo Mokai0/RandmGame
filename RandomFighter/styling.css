@@ -17,6 +17,10 @@ body {
   color: red
 }
 
+.name {
+  text-shadow: -1px 0 white,0 1px white,1px 0 white,0 -1px white;
+}
+
 #player {
   float: right;
   text-align: right;
@@ -24,4 +28,9 @@ body {
 
 #playerImg {
   width: 200px;
+}
+
+#attack {
+  margin-top: 2.5em;
+  margin-bottom: .5em;
 }

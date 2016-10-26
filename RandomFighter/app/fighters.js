@@ -1,6 +1,6 @@
-var brawler = new fighterStats("Turk the Brawler", 90, 7, 3);
-var tank = new fighterStats("Frank the Tank", 110, 3, 7);
-var expert = new fighterStats("Mr. Miyagi the Expert", 100, 5, 5);
+var brawler = new fighterStats("Turk the Brawler", 90, 17, 3);
+var tank = new fighterStats("Frank the Tank", 110, 3, 17);
+var expert = new fighterStats("Mr. Miyagi the Expert", 100, 10, 10);
 var fighterSelect;
 
 var buttons = document.querySelectorAll('button');
