@@ -7,43 +7,17 @@ var button = document.getElementById('counter');
 function monsterCounter () {
   mc++;
   monsterCat = new monsterStats(mc);
-  console.log(monsterCat)
+  console.log(monsterCat);
+  // return monsterCat;
 }
-button.addEventListener("click", monsterCounter);
 
 //monsterStat(level) level doesn't mean anything, its just a name that will encompass the variable to be used within the app
 function monsterStats(level) {
   this.name = 'Monster Cat '+level;
-  this.hp = 100 + (level*.25);
+  this.hp = 100 + Math.ceil(level*1.5);
   this.atk = statGen(level, level+5);
   this.def = statGen(level, level+5);
   function statGen(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
-
-
-
-
-
-// Returns a random integer between min (included) and max (included)
-// Using Math.round() will give you a non-uniform distribution!
-// function statGen(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }      console.log(statGen());
-
-// for (i = 0; i < '../img/monsters'.length; i++) {
-//     document.getElementById('mpic') += cars[i] + "<br>";
-// }
-
-// do {
-//   MC++;
-//     text += "The number is " + i;
-//     i++;var mc = MC++
-// }
-// while (i < 10);
-
-// for (MC; MC<'../img/monsters'.length; MC++) {
-//   console.log(MC);
-//   document.write(img/monsters.MC);
-// }

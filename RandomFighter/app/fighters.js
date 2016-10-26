@@ -41,11 +41,11 @@ function fighterSelection() {
 
 document.getElementById("choose").addEventListener("click", fighterSelection);
 
-function fighter () {
+/*function fighter () {
   alert('this');
 
   // return name;
-}
+}*/
 
 
 // fighter.prototype.levelUp function (hp, atk, def) {
