@@ -25,7 +25,7 @@ attack.onclick = function fight() {
   eH.innerHTML = monsterCat.hp2 + "/" + monsterCat.hp;
   pH.innerHTML = p1.hp2 + '/' + p1.hp;
   console.log(monsterCat.hp2);
-
+  //The problem is right here
   if (monsterCat.hp2 = 0) {
     alert("YOU WIN!");
   }
