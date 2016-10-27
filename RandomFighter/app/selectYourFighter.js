@@ -15,3 +15,11 @@ buttons.forEach(function(button) {
     fighterSelect !== undefined ? console.log(JSON.stringify(fighterSelect, null, 2)) : null
   }
 });
+
+function fighterSelection() {
+  document.getElementById('selectedFighter').innerText = "you've clicked on "+
+  JSON.stringify(fighterSelect.name, null, 2);
+}
+
+
+document.getElementById("choose").addEventListener("click", fighterSelection);

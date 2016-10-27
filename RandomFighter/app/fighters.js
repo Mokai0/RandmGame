@@ -18,11 +18,3 @@ function fighterStats(name, hp, atk, def) {
     // console.log('You have taken ' + damage + 'damage!');
   }
 }
-
-function fighterSelection() {
-  document.getElementById('selectedFighter').innerText = "you've clicked on "+
-  JSON.stringify(fighterSelect.name, null, 2);
-}
-
-
-document.getElementById("choose").addEventListener("click", fighterSelection);
