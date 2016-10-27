@@ -26,16 +26,8 @@ buttons.forEach(function(button) {
 function fighterStats(name, hp, atk, def) {
   this.name = name;
   this.hp = hp;
-  this.hp2 = hp;
   this.atk = atk;
   this.def = def;
-
-  /** Takes damage from an enemy@param{int} damage The damage taken*/
-  this.takeDamage = function(damage) {
-    this.hp2 = this.hp2 - damage;
-    this.hp2 = this.hp2 < 0 ? 0 : this.hp2;
-    console.log('You have taken ' + damage + 'damage!');
-  }
 }
 // document.getElementById('my-object').innerText = JSON.stringify(myObject, null, 2)
 function fighterSelection() {

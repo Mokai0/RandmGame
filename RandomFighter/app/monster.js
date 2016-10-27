@@ -21,19 +21,27 @@ function monsterStats(level) {
   function statGen(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+  /*Takes damage from an enemy@param{int} damage the damage taken */
+  this.takeDamage=function(damage) {
+    this.hp2 = this.hp2 - damage;
+    this.hp2 = this.jp2 < 0 ? 0 : this.hp2;
+    console.log(this.name + ' has taken ' + p1.atk + 'damage!');
+  }
 }
 
 
 var button = document.getElementById('attack');
 
-button.addEventListener("click", function () {if (monsterCat.hp2 < 0) {
-  alert("You've slain the Monster!");
-  prompt("Continue fighting? (type YES or NO)");
-  if (YES) {
-    console.log(mc++)
-  }
-}
-});
+// button.addEventListener("click", function () {if (monsterCat.hp2 < 0) {
+//   alert("You've slain the Monster!");
+//   prompt("Continue fighting? (type YES or NO)");
+//   if ("YES") {
+//     console.log(mc++)
+//   } else {
+//     alert("You've slain "+mc+" monsters!")
+//   }
+// }
+// });
 
 
 // if (YES) {

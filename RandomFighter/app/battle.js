@@ -1,4 +1,3 @@
-brawler.hp2 = brawler.hp;
 var p1 = brawler;
 var e1 = monsterCat
 
@@ -14,49 +13,26 @@ pH.innerHTML = p1.hp2 + '/' + p1.hp;
 
 
 var attack = document.getElementById('attack');
-attack.onclick = function fight() {
-    if (monsterCat.hp2 == 0) {
-    alert("You've slain the Monster!");
-    mc++;
-    monsterCat.hp2 = monsterCat.hp;
-    p1.hp2 = p1.hp;
-    console.log(mc);
-    console.log(monsterCat);
-    eH.innerHTML = monsterCat.hp2 + "/" + monsterCat.hp;
-    pH.innerHTML = p1.hp2 + '/' + p1.hp;
-  } else {
-    monsterCat.hp2 = monsterCat.hp2-p1.atk;
-    monsterCat.hp2 = monsterCat.hp2 < 0 ? 0 : monsterCat.hp2;
-    console.log(monsterCat.hp2);
-    p1.hp2 = p1.hp2-monsterCat.atk;
-    p1.hp2 = p1.hp2 < 0 ? 0 : p1.hp2;
-    console.log(brawler.hp2);
-    console.log(monsterCat.name+' has taken '+p1.atk+'damage! You have taken '+monsterCat.atk+'damage!');
-    eH.innerHTML = monsterCat.hp2 + "/" + monsterCat.hp;
-    pH.innerHTML = p1.hp2 + '/' + p1.hp;
-    console.log(monsterCat.hp2);
-  }
-  console.log(monsterCat.hp2);
-
+/* displays the hit points of both the player and the enemy on the screen @param player @param enemy*/
+function displayStats(player, enemy)
+{
+  eN.innerHTML = enemy.name;
+  eH.innerHTML = enemy.hp2 + "/" + enemy.hp;
+  pH.innerHTML = player.hp2 + '/' + player.hp;
 }
-// if (true) {
-// 
-// } else {
-//
-// }
-// (function() {
-//   'use strict';
-//
-// }());
-// if (monsterCat.hp2 = 0) {
-//   alert("You've slain the Monster!");
-//   prompt("Continue fighting? (type YES or NO)");
-//   if ('y') {
-//     mc++;
-//     console.log(mc);
-//     document.getElementById('enemyName').innerHTML = monsterCat.name;
-//     console.log('check');
-//     eH.innerHTML = monsterCat.hp2+'/'+monsterCat.hp;
-//     pH.innerHtml = p1.hp2+'/'+p1.hp;
-//   }
-// }
+/*prepares the player and the enemy for the next round*/
+function prepareForNextRound(){
+   alert("You've slain the Monster!");
+   monsterCounter();
+   p1.hp2 = p1.hp;
+   displayStats(p1, monsterCat);
+}attack.onclick = function fight() {
+   //send damage to enemy
+   monsterCat.takeDamage(p1.atk);
+  //  console.log(monsterCat.hp2);
+   p1.takeDamage(monsterCat.atk);
+  //  console.log(brawler.hp2);
+   displayStats(p1, monsterCat);
+   if (monsterCat.hp2 == 0)
+       prepareForNextRound();
+};
