@@ -13,8 +13,25 @@ function fighterStats(name, hp, atk, def) {
 
   /** Takes damage from an enemy@param{int} damage The damage taken*/
   this.takeDamage = function(damage) {
-    this.hp2 = this.hp2 - damage;
+    var damageTaken = Math.abs(damage - this.def);
+    console.log(damageTaken);
+    if(damage < this.def) {
+      damageTaken = 0;
+    }
+    this.hp2 = this.hp2 - damageTaken;
     this.hp2 = this.hp2 < 0 ? 0 : this.hp2;
     // console.log('You have taken ' + damage + 'damage!');
   }
 }
+// function lvlUp(hp, atk, def) {
+//   this.hp+10;
+//   this.atk+5;
+//   this.def+5;
+// }
+// if (mc=5) {
+//   fighterSelect.prototype.lvlUp function (hp, atk, def) {
+//   this.hp+10;
+//   this.atk+5;
+//   this.def+5;
+//   };
+// }

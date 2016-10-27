@@ -1,5 +1,7 @@
-var p1 = brawler;
-var e1 = monsterCat
+fighterSelect = brawler;
+var p1 = fighterSelect;
+console.log(fighterSelect);
+var e1 = monsterCat;
 
 var eN = document.getElementById('enemyName')
 eN.innerHTML = monsterCat.name;
@@ -35,5 +37,9 @@ function prepareForNextRound(){
    displayStats(p1, monsterCat);
   if (monsterCat.hp2 <= 0) {
     prepareForNextRound();
+  }
+  if (p1.hp2 <= 0) {
+    alert("You've been defeated...")
+    document.getElementById('deadPlayer').outerHTML = '<h1 class="text-center"><kbd>YOU ARE DEAD</kbd></h1>';
   }
 };

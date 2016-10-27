@@ -23,7 +23,11 @@ function monsterStats(level) {
   }
   /*Takes damage from an enemy@param{int} damage the damage taken */
   this.takeDamage=function(damage) {
-    this.hp2 = this.hp2 - (damage - this.def);
+    var damageTaken = Math.abs(damage - this.def);
+    if(damage < this.def) {
+      damageTaken = 0;
+    }
+    this.hp2 = this.hp2 - damageTaken;
     this.hp2 = this.hp2 < 0 ? 0 : this.hp2;
     // console.log(this.name + ' has taken ' + p1.atk + 'damage!');
   }
