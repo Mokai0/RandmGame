@@ -23,9 +23,9 @@ function monsterStats(level) {
   }
   /*Takes damage from an enemy@param{int} damage the damage taken */
   this.takeDamage=function(damage) {
-    this.hp2 = this.hp2 - damage;
-    this.hp2 = this.jp2 < 0 ? 0 : this.hp2;
-    console.log(this.name + ' has taken ' + p1.atk + 'damage!');
+    this.hp2 = this.hp2 - (damage - this.def);
+    this.hp2 = this.hp2 < 0 ? 0 : this.hp2;
+    // console.log(this.name + ' has taken ' + p1.atk + 'damage!');
   }
 }
 
@@ -42,11 +42,3 @@ var button = document.getElementById('attack');
 //   }
 // }
 // });
-
-
-// if (YES) {
-//  mc++;
-//  console.log(monsterCat);
-// } else {
-//  alert("Good game! You've killed "+mc+" monsters!")
-// }

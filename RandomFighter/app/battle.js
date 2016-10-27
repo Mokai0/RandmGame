@@ -33,6 +33,7 @@ function prepareForNextRound(){
    p1.takeDamage(monsterCat.atk);
   //  console.log(brawler.hp2);
    displayStats(p1, monsterCat);
-   if (monsterCat.hp2 == 0)
-       prepareForNextRound();
+  if (monsterCat.hp2 <= 0) {
+    prepareForNextRound();
+  }
 };
