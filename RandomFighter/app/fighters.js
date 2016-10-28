@@ -1,6 +1,7 @@
 var brawler = new fighterStats("Turk the Brawler", 90, 12, 4);
 var tank = new fighterStats("Frank the Tank", 110, 4, 12);
 var expert = new fighterStats("Mr. Miyagi the Expert", 100, 8, 8);
+var nulll = new fighterStats("PICK A FIGHTER");
 var fighterSelect;
 
 // document.getElementById('brawler').addEventListener('click', fighterSelect = brawler)

@@ -9,16 +9,23 @@ buttons.forEach(function(button) {
     } else if (this.id == 'expert'){
       fighterSelect = expert;
     } else {
-      fighterSelect = undefined
-      alert('Why are you playing a fighting game?')
+      fighterSelect = undefined;
+      // alert('Why are you playing a fighting game?');
+      document.getElementById('selectedFighter').outerHTML = '<h1 class="text-center" id=selectedFighter><kbd>PICK A FIGHTER</kbd></h1>';
     }
     fighterSelect !== undefined ? console.log(JSON.stringify(fighterSelect, null, 2)) : null
   }
 });
 
 function fighterSelection() {
-  document.getElementById('selectedFighter').innerText = "you've clicked on "+
-  JSON.stringify(fighterSelect.name, null, 2);
+  if (fighterSelect !== undefined) {
+    document.getElementById('selectedFighter').outerHTML = '<pre id=selectedFighter></pre>';
+    document.getElementById('selectedFighter').innerHTML = "You've clicked on " +  JSON.stringify(fighterSelect.name, null, 2);
+    document.getElementById('submissionButton').outerHTML = '<a class="btn btn-danger btn-lg btn-block" href="battlePage.html" type="submit" id=submissionButton>FIGHT</a>'
+  } else {
+    document.getElementById('submissionButton').outerHTML = '<div id=submissionButton></div>';
+  }
+
 }
 
 
