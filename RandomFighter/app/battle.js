@@ -1,6 +1,7 @@
-fighterSelect = brawler;
-var p1 = fighterSelect;
-console.log(fighterSelect);
+chosenOne = localStorage.getItem('fighterSelect');
+var p1 = JSON.parse(chosenOne);
+console.log(p1);
+// var p1 = brawler;
 var e1 = monsterCat;
 
 var eN = document.getElementById('enemyName')
@@ -31,7 +32,7 @@ function prepareForNextRound(){
 }attack.onclick = function fight() {
    //send damage to enemy
    monsterCat.takeDamage(p1.atk);
-  //  console.log(monsterCat.hp2);
+   console.log(monsterCat.hp2);
    p1.takeDamage(monsterCat.atk);
   //  console.log(brawler.hp2);
    displayStats(p1, monsterCat);

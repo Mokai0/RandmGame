@@ -22,6 +22,7 @@ function fighterSelection() {
     document.getElementById('selectedFighter').outerHTML = '<pre id=selectedFighter></pre>';
     document.getElementById('selectedFighter').innerHTML = "You've clicked on " +  JSON.stringify(fighterSelect.name, null, 2);
     document.getElementById('submissionButton').outerHTML = '<a class="btn btn-danger btn-lg btn-block" href="battlePage.html" type="submit" id=submissionButton>FIGHT</a>'
+    localStorage.setItem("fighterSelect", JSON.stringify(fighterSelect));
   } else {
     document.getElementById('submissionButton').outerHTML = '<div id=submissionButton></div>';
   }
