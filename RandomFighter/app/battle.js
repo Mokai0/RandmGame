@@ -1,7 +1,7 @@
-chosenOne = localStorage.getItem('fighterSelect');
-var p1 = JSON.parse(chosenOne);
+var chosenOne = JSON.parse(localStorage.getItem('fighterSelect'));
+var p1 = new fighterStats(chosenOne.name, chosenOne. hp, chosenOne.atk, chosenOne.def);
 console.log(p1);
-// var p1 = brawler;
+// var p1 = chosenOne;
 var e1 = monsterCat;
 
 var eN = document.getElementById('enemyName')
@@ -14,8 +14,6 @@ pN.innerHTML = p1.name;
 var pH = document.getElementById('playerHealth')
 pH.innerHTML = p1.hp2 + '/' + p1.hp;
 
-
-var attack = document.getElementById('attack');
 /* displays the hit points of both the player and the enemy on the screen @param player @param enemy*/
 function displayStats(player, enemy)
 {
@@ -29,10 +27,12 @@ function prepareForNextRound(){
    monsterCounter();
    p1.hp2 = p1.hp;
    displayStats(p1, monsterCat);
-}attack.onclick = function fight() {
+}
+function beginFight() {
+  // attack.setAttribute("disabled", "");
    //send damage to enemy
    monsterCat.takeDamage(p1.atk);
-   console.log(monsterCat.hp2);
+  //  console.log(monsterCat.hp2);
    p1.takeDamage(monsterCat.atk);
   //  console.log(brawler.hp2);
    displayStats(p1, monsterCat);
@@ -44,3 +44,9 @@ function prepareForNextRound(){
     document.getElementById('deadPlayer').outerHTML = '<h1 class="text-center"><kbd>YOU ARE DEAD</kbd></h1>';
   }
 };
+
+//This is the fight button, press it to start the battle!
+var attack = document.getElementById('attack');
+attack.onclick = beginFight;
+
+//if (p1.hp2!=0 || e1.hp2!=0) {}

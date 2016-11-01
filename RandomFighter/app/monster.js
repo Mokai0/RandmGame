@@ -29,6 +29,7 @@ function monsterStats(level) {
     }
     this.hp2 = this.hp2 - damageTaken;
     this.hp2 = this.hp2 < 0 ? 0 : this.hp2;
+    console.log(damageTaken);
     // console.log(this.name + ' has taken ' + p1.atk + 'damage!');
   }
 }
