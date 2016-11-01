@@ -25,6 +25,7 @@ function displayStats(player, enemy)
 function prepareForNextRound(){
    alert("You've slain the Monster!");
    monsterCounter();
+   p1.hp += 5;
    p1.hp2 = p1.hp;
    displayStats(p1, monsterCat);
 }
