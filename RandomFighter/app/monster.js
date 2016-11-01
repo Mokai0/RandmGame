@@ -25,7 +25,7 @@ function monsterStats(level) {
   this.takeDamage=function(damage) {
     var damageTaken = Math.abs(damage - this.def);
     if(damage < this.def) {
-      damageTaken = 0;
+      damageTaken = 1;
     }
     this.hp2 = this.hp2 - damageTaken;
     this.hp2 = this.hp2 < 0 ? 0 : this.hp2;
