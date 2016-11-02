@@ -1,5 +1,5 @@
 var chosenOne = JSON.parse(localStorage.getItem('fighterSelect'));
-var p1 = new fighterStats(chosenOne.name, chosenOne. hp, chosenOne.atk, chosenOne.def);
+var p1 = new fighterStats(chosenOne.name, chosenOne.hp+mc, chosenOne.atk, chosenOne.def);
 console.log(p1);
 // var p1 = chosenOne;
 var e1 = monsterCat;
@@ -25,7 +25,7 @@ function displayStats(player, enemy)
 function prepareForNextRound(){
    alert("You've slain the Monster!");
    monsterCounter();
-   p1.hp += 5;
+   p1.hp += mc;
    p1.hp2 = p1.hp;
    displayStats(p1, monsterCat);
 }
