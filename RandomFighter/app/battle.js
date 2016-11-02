@@ -23,20 +23,24 @@ function displayStats(player, enemy)
 }
 /*prepares the player and the enemy for the next round*/
 function prepareForNextRound(){
-   alert("You've slain the Monster!");
-   monsterCounter();
-   p1.hp += mc;
-   p1.hp2 = p1.hp;
-   displayStats(p1, monsterCat);
+  alert("You've slain the Monster!");
+  monsterCounter();
+  p1.hp += mc;
+  p1.hp2 = p1.hp;
+  displayStats(p1, monsterCat);
 }
-function beginFight() {
+function round() {
   // attack.setAttribute("disabled", "");
-   //send damage to enemy
-   monsterCat.takeDamage(p1.atk);
+  //send damage to enemy
+  monsterCat.takeDamage(p1.atk);
   //  console.log(monsterCat.hp2);
-   p1.takeDamage(monsterCat.atk);
+  p1.takeDamage(monsterCat.atk);
   //  console.log(brawler.hp2);
-   displayStats(p1, monsterCat);
+  displayStats(p1, monsterCat);
+  //Auto attack loop
+  if (p1.hp2>=0 || e1.hp2>=0) {
+    setTimeout(round, 500);
+    }
   if (monsterCat.hp2 <= 0) {
     prepareForNextRound();
   }
@@ -46,8 +50,16 @@ function beginFight() {
   }
 };
 
-//This is the fight button, press it to start the battle!
-var attack = document.getElementById('attack');
-attack.onclick = beginFight;
 
-//if (p1.hp2!=0 || e1.hp2!=0) {}
+//This is the fight button, press it to start the battle!
+var beginFight = document.getElementById('attack');
+beginFight.onclick = round;// function beginFight()
+
+
+
+// {
+//   if (p1.hp2!=0 || e1.hp2!=0) {
+//   beginRound();
+//   }
+// }
+// attack.onclick = beginFight;
