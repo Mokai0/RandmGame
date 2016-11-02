@@ -2,7 +2,6 @@ var chosenOne = JSON.parse(localStorage.getItem('fighterSelect'));
 var p1 = new fighterStats(chosenOne.name, chosenOne.hp+mc, chosenOne.atk, chosenOne.def);
 console.log(p1);
 // var p1 = chosenOne;
-var e1 = monsterCat;
 
 var eN = document.getElementById('enemyName')
 eN.innerHTML = monsterCat.name;
@@ -38,8 +37,8 @@ function round() {
   //  console.log(brawler.hp2);
   displayStats(p1, monsterCat);
   //Auto attack loop
-  if (p1.hp2>=0 || e1.hp2>=0) {
-    setTimeout(round, 500);
+  if (p1.hp2>0 && monsterCat.hp2>0) {
+    setTimeout(round, 100);
     }
   if (monsterCat.hp2 <= 0) {
     prepareForNextRound();
@@ -54,12 +53,3 @@ function round() {
 //This is the fight button, press it to start the battle!
 var beginFight = document.getElementById('attack');
 beginFight.onclick = round;// function beginFight()
-
-
-
-// {
-//   if (p1.hp2!=0 || e1.hp2!=0) {
-//   beginRound();
-//   }
-// }
-// attack.onclick = beginFight;
