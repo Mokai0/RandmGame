@@ -3,15 +3,18 @@ var p1 = new fighterStats(chosenOne.name, chosenOne.hp+mc, chosenOne.atk, chosen
 console.log(p1);
 // var p1 = chosenOne;
 
-var eN = document.getElementById('enemyName')
+var eN = document.getElementById('enemyName');
 eN.innerHTML = monsterCat.name;
-var eH = document.getElementById('enemyHealth')
+var eH = document.getElementById('enemyHealth');
 eH.innerHTML = monsterCat.hp2 + "/" + monsterCat.hp;
 
-var pN = document.getElementById('playerName')
+var pN = document.getElementById('playerName');
 pN.innerHTML = p1.name;
-var pH = document.getElementById('playerHealth')
+var pH = document.getElementById('playerHealth');
 pH.innerHTML = p1.hp2 + '/' + p1.hp;
+
+//This is the fight button, press it to start the battle!
+var beginFight = document.getElementById('attack');
 
 /* displays the hit points of both the player and the enemy on the screen @param player @param enemy*/
 function displayStats(player, enemy)
@@ -39,7 +42,10 @@ function round() {
   //Auto attack loop
   if (p1.hp2>0 && monsterCat.hp2>0) {
     setTimeout(round, 100);
-    }
+    beginFight.setAttribute("disabled", "");
+  } else {
+    beginFight.removeAttribute("disabled", "");
+  }
   if (monsterCat.hp2 <= 0) {
     prepareForNextRound();
   }
@@ -50,6 +56,5 @@ function round() {
 };
 
 
-//This is the fight button, press it to start the battle!
-var beginFight = document.getElementById('attack');
-beginFight.onclick = round;// function beginFight()
+//This begins the fight sequence
+beginFight.onclick = round;
