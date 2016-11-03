@@ -10,7 +10,8 @@ buttons.forEach(function(button) {
       fighterSelect = expert;
     } else {
       fighterSelect = undefined;
-      // alert('Why are you playing a fighting game?');
+
+      // This will change the HTML displayed
       document.getElementById('selectedFighter').outerHTML = '<h1 class="text-center" id=selectedFighter><kbd>PICK A FIGHTER</kbd></h1>';
     }
     fighterSelect !== undefined ? console.log(JSON.stringify(fighterSelect, null, 2)) : null

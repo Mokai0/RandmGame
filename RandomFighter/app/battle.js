@@ -43,7 +43,7 @@ function round() {
   displayStats(p1, monsterCat);
   //Auto attack loop
   if (p1.hp2>0 && monsterCat.hp2>0) {
-    setTimeout(round, 100);
+    setTimeout(round, 50);
     beginFight.setAttribute("disabled", "");
   } else {
     beginFight.removeAttribute("disabled", "");
