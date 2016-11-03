@@ -28,7 +28,7 @@ function displayStats(player, enemy)
 function prepareForNextRound(){
   alert("You've slain the Monster!");
   monsterCounter();
-  // ei.outerHTML = randomCat;
+  ei.setAttribute("src", "img/monsters/"+catArr[imgArr()]);
   p1.hp += mc;
   p1.hp2 = p1.hp;
   displayStats(p1, monsterCat);
@@ -43,7 +43,7 @@ function round() {
   displayStats(p1, monsterCat);
   //Auto attack loop
   if (p1.hp2>0 && monsterCat.hp2>0) {
-    setTimeout(round, 50);
+    setTimeout(round, 100);
     beginFight.setAttribute("disabled", "");
   } else {
     beginFight.removeAttribute("disabled", "");
