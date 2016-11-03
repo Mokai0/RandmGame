@@ -7,7 +7,8 @@ var eN = document.getElementById('enemyName');
 eN.innerHTML = monsterCat.name;
 var eH = document.getElementById('enemyHealth');
 eH.innerHTML = monsterCat.hp2 + "/" + monsterCat.hp;
-
+var ei = document.getElementById('monsterCat');
+// ei.outerHTML = "<img id=monsterCat src="
 var pN = document.getElementById('playerName');
 pN.innerHTML = p1.name;
 var pH = document.getElementById('playerHealth');
@@ -27,6 +28,7 @@ function displayStats(player, enemy)
 function prepareForNextRound(){
   alert("You've slain the Monster!");
   monsterCounter();
+  // ei.outerHTML = randomCat;
   p1.hp += mc;
   p1.hp2 = p1.hp;
   displayStats(p1, monsterCat);
