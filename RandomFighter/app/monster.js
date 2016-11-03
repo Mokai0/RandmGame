@@ -18,6 +18,7 @@ function monsterStats(level) {
   this.hp2 = 100 + Math.ceil(level*1.5);
   this.atk = statGen(level, level+5);
   this.def = statGen(level, level+5);
+  console.log(level);
   function statGen(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -29,7 +30,7 @@ function monsterStats(level) {
     }
     this.hp2 = this.hp2 - damageTaken;
     this.hp2 = this.hp2 < 0 ? 0 : this.hp2;
-    console.log(damageTaken);
+    // console.log(damageTaken);
     // console.log(this.name + ' has taken ' + p1.atk + 'damage!');
   }
 }

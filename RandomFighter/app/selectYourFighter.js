@@ -12,7 +12,7 @@ buttons.forEach(function(button) {
       fighterSelect = undefined;
 
       // This will change the HTML displayed
-      document.getElementById('selectedFighter').outerHTML = '<h1 class="text-center" id=selectedFighter><kbd>PICK A FIGHTER</kbd></h1>';
+      document.getElementById('selectedFighter').outerHTML = '<h1 class="text-center" id=selectedFighter><kbd>YOU MUST PICK A FIGHTER</kbd></h1>';
     }
     fighterSelect !== undefined ? console.log(JSON.stringify(fighterSelect, null, 2)) : null
   }
@@ -22,7 +22,7 @@ function fighterSelection() {
   if (fighterSelect !== undefined) {
     document.getElementById('selectedFighter').outerHTML = '<pre id=selectedFighter></pre>';
     document.getElementById('selectedFighter').innerHTML = "You've clicked on " +  JSON.stringify(fighterSelect.name, null, 2);
-    document.getElementById('submissionButton').outerHTML = '<a class="btn btn-danger btn-lg btn-block" href="battlePage.html" type="submit" id=submissionButton>FIGHT</a>'
+    document.getElementById('submissionButton').outerHTML = '<a class="btn btn-danger btn-lg btn-block" href="battlePage.html" type="submit" id=submissionButton>PICK A FIGHTER</a>'
     localStorage.setItem("fighterSelect", JSON.stringify(fighterSelect));
   } else {
     document.getElementById('submissionButton').outerHTML = '<div id=submissionButton></div>';

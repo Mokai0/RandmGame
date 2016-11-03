@@ -4,9 +4,8 @@ font-family: 'Yatra One', cursive;
 /*Global*/
 body {
   font-family: 'Yatra One', cursive;
+  text-shadow: -1px 0 white,0 1px white,1px 0 white,0 -1px white;
 }
-body {
-  }
 
 .background {
   position:fixed;
@@ -23,14 +22,11 @@ body {
 /*Battle Page*/
 #monsterCat {
   width: 320px;
-}
-.health {
-  color: red;
-  text-shadow: -1px 0 white,0 1px white,1px 0 white,0 -1px white;
+  height: 200px;
 }
 
-.name {
-  text-shadow: -1px 0 white,0 1px white,1px 0 white,0 -1px white;
+.health {
+  color: red;
 }
 
 #player {
