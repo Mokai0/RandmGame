@@ -1,3 +1,10 @@
+var express = require('express');
+var path = require('path');
+var app = express();
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+
 var chosenOne = JSON.parse(localStorage.getItem('fighterSelect'));
 var p1 = new fighterStats(chosenOne.name, chosenOne.hp+mc, chosenOne.atk, chosenOne.def);
 console.log(p1);
@@ -56,6 +63,8 @@ function round() {
   if (p1.hp2 <= 0) {
     alert("You've been defeated...")
     document.getElementById('deadPlayer').outerHTML = '<h1 class="text-center"><kbd>YOU ARE DEAD</kbd></h1>';
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
   }
 };
 
