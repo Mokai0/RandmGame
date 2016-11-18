@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose');
 
-var todoSchema = new mongoose.Schema({
+var scoreSchema = new mongoose.Schema({
   name: String,
   mc  : Number
 });
