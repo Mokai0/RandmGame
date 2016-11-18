@@ -1,17 +1,14 @@
 'use strict';
 
-var Todo = require('./models/todo');
+var Score = require('./models/scorekeeper');
 
-var todos = [
-  'workout a lot',
-  'play ball with friends',
-  'game on bf4'
+var scores = [
 ];
 
-todos.forEach(function(todo, index) {
-  Todo.find({'name': todo}, function (err, todos) {
-    if(!err && !todos.length) {
-      Todo.create({completed: false, name: todo});
+scores.forEach(function(score, index) {
+  Score.find({'name': score}, function (err, scores) {
+    if(!err && !scores.length) {
+      Score.create({score: mc, name: fighterStats.name});
     };
   });
 });
