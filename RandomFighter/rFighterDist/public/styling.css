@@ -1,0 +1,54 @@
+/* Call font to use it:
+font-family: 'Yatra One', cursive;
+*/
+/*Global*/
+body {
+  font-family: 'Yatra One', cursive;
+  text-shadow: -1px 0 white,0 1px white,1px 0 white,0 -1px white;
+}
+
+.background {
+  position:fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/wallpapers/BassNature.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*Battle Page*/
+#monsterCat {
+  width: 320px;
+  height: 200px;
+}
+
+.health {
+  color: red;
+}
+
+#player {
+  float: right;
+  text-align: right;
+}
+
+#playerImg {
+  width: 200px;
+}
+
+#attack {
+  margin-top: 2.5em;
+  margin-bottom: .5em;
+}
+
+/*LEADERBOARD*/
+.container-fluid {
+  background: #fff;
+  width: 100%;
+  min-width: 500px;
+  margin: 80px auto 0;
+  border-top: 40px solid #5a6772;
+  text-align: left
+}
