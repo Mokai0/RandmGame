@@ -28,7 +28,7 @@ function displayStats(player, enemy)
 function prepareForNextRound(){
   alert("You've slain the Monster!");
   monsterCounter();
-  ei.setAttribute("src", "img/monsters/"+catArr[imgArr()]);
+  ei.setAttribute("src", "../img/monsters/"+catArr[imgArr()]);
   p1.hp += mc;
   if (mc%5 === 0) {
     // p1.hp+=10;
@@ -40,12 +40,8 @@ function prepareForNextRound(){
   displayStats(p1, monsterCat);
 }
 function round() {
-  // attack.setAttribute("disabled", "");
-  //send damage to enemy
   monsterCat.takeDamage(p1.atk);
-  //  console.log(monsterCat.hp2);
   p1.takeDamage(monsterCat.atk);
-  //  console.log(brawler.hp2);
   displayStats(p1, monsterCat);
   //Auto attack loop
   if (p1.hp2>0 && monsterCat.hp2>0) {

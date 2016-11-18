@@ -8,7 +8,6 @@ function monsterCounter () {
   mc++;
   monsterCat = new monsterStats(mc);
   console.log(monsterCat);
-  // return monsterCat;
 }
 
 //monsterStat(level) level doesn't mean anything, its just a name that will encompass the variable to be used within the app
@@ -30,21 +29,7 @@ function monsterStats(level) {
     }
     this.hp2 = this.hp2 - damageTaken;
     this.hp2 = this.hp2 < 0 ? 0 : this.hp2;
-    // console.log(damageTaken);
-    // console.log(this.name + ' has taken ' + p1.atk + 'damage!');
   }
 }
 
-
 var button = document.getElementById('attack');
-
-// button.addEventListener("click", function () {if (monsterCat.hp2 < 0) {
-//   alert("You've slain the Monster!");
-//   prompt("Continue fighting? (type YES or NO)");
-//   if ("YES") {
-//     console.log(mc++)
-//   } else {
-//     alert("You've slain "+mc+" monsters!")
-//   }
-// }
-// });

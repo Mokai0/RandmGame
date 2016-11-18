@@ -10,7 +10,6 @@ buttons.forEach(function(button) {
       fighterSelect = expert;
     } else {
       fighterSelect = undefined;
-
       // This will change the HTML displayed
       document.getElementById('selectedFighter').outerHTML = '<h1 class="text-center" id=selectedFighter><kbd>YOU MUST PICK A FIGHTER</kbd></h1>';
     }
@@ -27,8 +26,6 @@ function fighterSelection() {
   } else {
     document.getElementById('submissionButton').outerHTML = '<div id=submissionButton></div>';
   }
-
 }
-
 
 document.getElementById("choose").addEventListener("click", fighterSelection);

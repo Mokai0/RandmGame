@@ -14,7 +14,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(img/wallpapers/BassNature.jpg);
+  background-image: url(../img/wallpapers/BassNature.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -41,4 +41,14 @@ body {
 #attack {
   margin-top: 2.5em;
   margin-bottom: .5em;
+}
+
+/*LEADERBOARD*/
+.container-fluid {
+  background: #fff;
+  width: 100%;
+  min-width: 500px;
+  margin: 80px auto 0;
+  border-top: 40px solid #5a6772;
+  text-align: left
 }

@@ -24,12 +24,3 @@ function fighterStats(name, hp, atk, def) {
     // console.log('You have taken ' + damage + 'damage!');
   }
 }
-
-
-// if (mc=5) {
-//   fighterSelect.prototype.lvlUp function (hp, atk, def) {
-//   this.hp+10;
-//   this.atk+5;
-//   this.def+5;
-//   };
-// }
