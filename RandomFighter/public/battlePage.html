@@ -26,9 +26,25 @@
       <img id=playerImg src="../img/fighters/MewTwo.jpg">
     </div>
   </body>
-  <script src='../app/jquery.js'></script>
+  <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
   <script src='../app/images.js'></script>
   <script src='../app/monster.js'></script>
   <script src='../app/fighters.js'></script>
   <script src='../app/battle.js'></script>
+  <script>$("#addScore").click(function() {
+    var score = $("#scoreInput").val();
+    var name = $("#nameInput").val();
+
+    $.ajax({
+     method: "POST",
+     url: '/api/scores',
+     data: { "name": name, "mc": score },
+    })
+     .then(function( theReturnData) {
+      console.log(theReturnData);
+        $(mc).clear();
+        $("#nameInput").clear();
+     });
+  });
+  </script>
 </html>

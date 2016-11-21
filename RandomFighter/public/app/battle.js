@@ -1,8 +1,8 @@
-var express = require('express');
-var path = require('path');
-var app = express();
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+// var express = require('express');
+// var path = require('path');
+// var app = express();
+// var bodyParser = require('body-parser');
+// var mongoose = require('mongoose');
 
 
 var chosenOne = JSON.parse(localStorage.getItem('fighterSelect'));
@@ -62,9 +62,10 @@ function round() {
   }
   if (p1.hp2 <= 0) {
     alert("You've been defeated...")
-    document.getElementById('deadPlayer').outerHTML = '<h1 class="text-center"><kbd>YOU ARE DEAD</kbd></h1>';
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: true }));
+    document.getElementById('deadPlayer').outerHTML = '<h1 class="text-center"><kbd>YOU ARE DEAD</kbd></h1>    <label>		name: 		<input type="text" id="nameInput" /></label></label>		<input type="button" id="addScore" value="add Ajax Score to the server" />';
+    // app.use(bodyParser.json());
+    // app.use(bodyParser.urlencoded({ extended: true }));
+    return (mc);
   }
 };
 
