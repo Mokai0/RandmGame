@@ -4,13 +4,20 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var parser = require('body-parser');
+var mongoose = require('mongoose');
 
-require('./database');
-require('./seed');
+var scoreRoute = require('./routes/scoreboard');
+
+
+mongoose.connect('localhost:27017/fighter-scores');
 
 app.use('/', express.static(path.join(__dirname, '../public')));
 app.use(parser.json());
-
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE');
+    next();
+});
 
 app.listen(3000, function() {
   console.log('serving');
