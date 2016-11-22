@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 var parser = require('body-parser');
 var mongoose = require('mongoose');
-
+var Scores = require('./models/scorekeeper');
 var scoreRoute = require('./routes/scoreboard');
 
 
@@ -24,11 +24,31 @@ app.listen(3000, function() {
 });
 
 app.get('/api/scores', function(req, resp) {
-	resp.send(scores);
+  Scores.find({}, function(err, scores) {
+    resp.send(scores);
+  });
+
 })
 
 app.post('/api/scores', function (req, resp) {
 	// here we add the post data to the array that we have declared above
-	scores.push({ name: req.body.name, score: req.body.score })
-	resp.send("Thanks! The score is inserted into the array!");
+  console.log(req.body);
+  var newScore = Scores({
+    name: req.body.name,
+    score: req.body.score
+  });
+
+  // save the user
+  newScore.save(function(err) {
+    if (err) {
+      resp.send("An error occured");
+      throw err;
+    }
+    else {
+      resp.send("Thanks! The score is inserted into the array!");
+      console.log('score created!');
+    }
+
+  });
+
 });

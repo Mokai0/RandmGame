@@ -41,7 +41,14 @@
     			})
     			 .then(function( theReturnData) {
     			 	console.log(theReturnData);
-    			   $("#responseData").text(JSON.stringify(theReturnData));
+              var htmlToDisplay = '';
+              theReturnData.forEach(function(score) {
+                htmlToDisplay += '<h2>Name: ' + score.name + '</h2>';
+                htmlToDisplay += '<h3>Score: ' + score.score + '</h3>';
+                htmlToDisplay += '<hr/>';
+              });
+    			   $("#responseData").html(htmlToDisplay);
+
     			 });
     		});
   	</script>
