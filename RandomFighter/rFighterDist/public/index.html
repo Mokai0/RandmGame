@@ -23,13 +23,34 @@
     <p><pre id="selectedFighter"></pre></p>
 
     <a class="btn btn-danger btn-lg btn-block" href="battlePage.html" type="submit" id=submissionButton>PICK A FIGHTER</a>
-    <<ul class='scoreboard'>
+    <div>
+		<input type="button" id="ajaxScores" value="Leaderboard" />
+	</div>
+    <div id="responseData">
 
-    </ul>
+	</div>
     <!-- <a class="btn btn-success" href='leaderboard.html'>LEADERBOARD</a> -->
-    <script src='../app/jquery.js'></script>
+    <script src="jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src='../app/fighters.js'></script>
     <script src='../app/selectYourFighter.js'></script>
-    <script src='../app/scoreboard.js'></script>
+    <script type="text/javascript">
+    		$("#ajaxScores").click(function() {
+    			$.ajax({
+    			 method: "GET",
+    			 url: '/api/scores',
+    			})
+    			 .then(function( theReturnData) {
+    			 	console.log(theReturnData);
+              var htmlToDisplay = '';
+              theReturnData.forEach(function(score) {
+                htmlToDisplay += '<h2>Name: ' + score.name + '</h2>';
+                htmlToDisplay += '<h3>Score: ' + score.score + '</h3>';
+                htmlToDisplay += '<hr/>';
+              });
+    			   $("#responseData").html(htmlToDisplay);
+
+    			 });
+    		});
+  	</script>
   </body>
 </html>

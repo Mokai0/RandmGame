@@ -1,12 +1,8 @@
-'use strict';
-
 var mongoose = require('mongoose');
 
 var scoreSchema = new mongoose.Schema({
-  name: String,
-  mc  : Number
+  name: {type: String},
+  score  : {type: Number}
 });
 
-var model = mongoose.model('Scoreboard', scoreSchema);
-
-module.exports = model;
+module.exports = mongoose.model('Scores', scoreSchema);
