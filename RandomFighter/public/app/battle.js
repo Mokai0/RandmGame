@@ -65,7 +65,7 @@ function round() {
     document.getElementById('deadPlayer').outerHTML = '<h1 class="text-center"><kbd>YOU ARE DEAD</kbd></h1>    <label>		name: 		<input type="text" id="nameInput" /></label></label>		<input type="button" id="addScore" value="add Ajax Score to the server" />';
     // app.use(bodyParser.json());
     // app.use(bodyParser.urlencoded({ extended: true }));
-    return (mc);
+    // return (mc);
   }
 };
 

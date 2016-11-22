@@ -38,7 +38,7 @@
     $.ajax({
      method: "POST",
      url: '/api/scores',
-     data: { "name": name, "mc": score },
+     data: { "name": name, "score": score },
     })
      .then(function( theReturnData) {
       console.log(theReturnData);
