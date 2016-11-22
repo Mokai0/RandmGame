@@ -1,12 +1,20 @@
 var buttons = document.querySelectorAll('button');
 var buttonsCount = buttons.length;
+$(document).ready(function() {
+  $('#submissionButton').hide()});
 buttons.forEach(function(button) {
   button.onclick = function() {
     if (this.id == 'brawler') {
+      $(document).ready(function() {
+        $('#submissionButton').show()});
       fighterSelect = brawler;
     } else if (this.id == 'tank') {
+      $(document).ready(function() {
+        $('#submissionButton').show()});
       fighterSelect = tank;
     } else if (this.id == 'expert'){
+      $(document).ready(function() {
+        $('#submissionButton').show()});
       fighterSelect = expert;
     } else {
       fighterSelect = undefined;

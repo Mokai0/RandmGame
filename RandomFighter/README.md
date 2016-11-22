@@ -7,3 +7,4 @@
   3] Launch a browser and go to URL localhost:3000  .
   4] Pick a character and play the game to your heart's content, once killed the game will end and ask you to enter your name to your local leaderboard.
   5] To view your leaderboard just go back to the main page: localhost:3000  .
+  - You must play through at least once to see the leaderboard populate.
