@@ -52,3 +52,14 @@ var deck = [
   {"value":12, "suit":"Hearts", "name":"Queen"},
   {"value":13, "suit":"Hearts", "name":"King"}
 ]
+
+function drawCard(deck) {
+  this.card = deck.length;
+}
+
+drawCard.prototype.createCard = function() {
+  var randomCard = Math.floor(Math.random()*this);
+  return randomCard;
+}
+
+var card = new drawCard();

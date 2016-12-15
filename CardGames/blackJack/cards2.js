@@ -4,10 +4,10 @@ var deck = {
   'cardNames' : ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King']
 };
 
-function drawCard(value, suit, name) {
+function drawCard(value, suit) {
   this.value = deck.cardValues;
   this.suit = deck.cardSuits;
-  this.name = deck.cardNames;
+  // this.name = deck.cardNames;
 }
 
 drawCard.prototype.createCard = function() {
